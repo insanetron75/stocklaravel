@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Fact extends Model
 {
     use HasFactory;
+
+    public function getValue(): float
+    {
+        return $this->value;
+    }
 }
