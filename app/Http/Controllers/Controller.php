@@ -47,6 +47,11 @@ class Controller extends BaseController
     {
         // Get function
         switch ($expression['fn']) {
+            case "*":
+                $function = function ($a, $b) {
+                    return $a * $b;
+                };
+                break;
             default:
             case "+":
                 $function = function ($a, $b) {
